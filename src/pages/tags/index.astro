@@ -1,0 +1,21 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const allWikiPosts = await Astro.glob("../wiki/*.md");
+const tags = [
+  ...new Set(allWikiPosts.map((post) => post.frontmatter.tags).flat()),
+];
+const pageTitle = "Tag Index";
+---
+
+<Layout title={pageTitle}>
+  <h1>Tags</h1>
+  <div>
+    {
+      tags.map((tag) => (
+        <p class="tag">
+          <a href={`/tags/${tag}`}>{tag}</a>
+        </p>
+      ))
+    }
+  </div>
+</Layout>

@@ -1,9 +1,8 @@
 ---
 const { frontmatter } = Astro.props;
-import Footer from "../components/Footer.astro";
-import Navbar from "../components/Navbar.astro";
+import Layout from "./Layout.astro";
 ---
 
-<Navbar />
-<slot />
-<Footer />
+<Layout title={frontmatter.title}>
+  <slot />
+</Layout>
