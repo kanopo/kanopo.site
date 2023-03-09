@@ -1,7 +1,8 @@
 ---
 title: "Test 1"
 author: "me"
-tags: ["test", "prova"]
+tags: ["test1", "test2"]
+draft: true
 layout: "../../layouts/WikiPostLayout.astro"
 ---
 
