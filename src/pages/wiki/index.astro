@@ -1,0 +1,17 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const allWikiPosts = await Astro.glob("../wiki/*.mdx");
+---
+
+<Layout title="Wiki">
+  <h1>Wiki</h1>
+  <ul>
+    {
+      allWikiPosts.map((post) => (
+        <li>
+          <a href={post.url}>{post.frontmatter.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
