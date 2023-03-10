@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@astrojs/rss": "^2.2.0",
-    "astro": "^2.0.18"
+    "astro": "^2.0.18",
+    "rehype-accessible-emojis": "^0.3.2",
+    "remark-toc": "^8.0.1"
   }
 }

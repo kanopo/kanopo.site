@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  font-size: 62.5%;
+}
+
 html.dark {
   background-color: #0d0950;
   color: #fff;
@@ -6,3 +15,12 @@ html.dark {
 .dark .nav-links a {
   color: #fff;
 }
+
+h1 {
+  font-size: 4rem;
+}
+
+a {
+  font-size: 1.8rem;
+}
+

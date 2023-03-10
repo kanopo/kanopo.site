@@ -4,5 +4,16 @@ import Layout from "./Layout.astro";
 ---
 
 <Layout title={frontmatter.title}>
+  <h1>{frontmatter.description}</h1>
+  <p>Scritto da: {frontmatter.author}</p>
+  <div>
+    {
+      frontmatter.tags.map((tag) => (
+        <p class="tag">
+          <a href={`/tags/${tag}`}>{tag}</a>
+        </p>
+      ))
+    }
+  </div>
   <slot />
 </Layout>
