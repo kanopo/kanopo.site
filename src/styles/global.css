@@ -2,19 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-@define-color white #a89984;
-@define-color black #282828;
 
 :root[data-theme="light"] {
-  --text-color: black;
-  --background-color: white;
-
+  --text-color: #282828;
+  --background-color: #fbfbf6;
+  --h1-color: #d65d0e;
+  --h2-color: #458588;
+  --selected-nav: #cc241d;
 }
 
 :root[data-theme="dark"] {
-  --text-color: white;
-  --background-color: black;
+  --text-color: #fbfbf6;
+  --background-color: #282828;
+  --h1-color: #d65d0e;
+  --h2-color: #458588;
+  --selected-nav: #cc241d;
 }
+
 
 /*
       'black': '#282828',
@@ -46,3 +50,18 @@
 }
 
 
+h1 {
+  color: var(--h1-color);
+}
+
+h2 {
+  color: var(--h2-color);
+}
+
+.nav-selected {
+  color: var(--selected-nav);
+}
+
+ul {
+  list-style-type: circle;  
+}

@@ -1,9 +1,10 @@
 ---
 title: "Test 1"
 description: "Primo post di prova di dmodmo"
+pubDate: 2023-01-01
 author: "me"
 tags: ["test1", "test2"]
-draft: false
+draft: true
 layout: "../../layouts/WikiPostLayout.astro"
 ---
 

@@ -5,14 +5,11 @@ const nonDraftPosts = allWikiPosts.filter((post) => !post.frontmatter.draft);
 ---
 
 <Layout title="Wiki">
-  <h1>Wiki</h1>
-  <ul>
-    {
-      nonDraftPosts.map((post) => (
-        <li>
-          <a href={post.url}>{post.frontmatter.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+  {
+    nonDraftPosts.map((post) => (
+      <ul>
+        <li><a href={post.url}>{post.frontmatter.title}</a></li>
+      </ul>
+    ))
+  }
 </Layout>

@@ -9,13 +9,14 @@ const pageTitle = "Tag Index";
 ---
 
 <Layout title={pageTitle}>
-  <h1>Tags</h1>
   <div>
     {
       tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
+        <ul class="tag">
+          <li>
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </li>
+        </ul>
       ))
     }
   </div>

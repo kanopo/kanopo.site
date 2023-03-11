@@ -6,7 +6,17 @@ import ThemeSwitcher from "./ThemeSwitcher.astro";
   <div class="w-[40vw] flex justify-start items-center">
     <a href="/" class="mr-[5vw]">Home</a>
     <a href="/wiki" class="mr-[5vw]">Wiki</a>
-    <a href="/tags" class="mr-[5vw]">Tags</a>
+    <a href="/about" class="mr-[5vw]">About</a>
   </div>
   <ThemeSwitcher />
 </div>
+
+<script>
+  let current = 0;
+  for (var i = 0; i < document.links.length; i++) {
+    if (document.links[i].href === document.URL) {
+      current = i;
+    }
+  }
+  document.links[current].classList.add("nav-selected");
+</script>
