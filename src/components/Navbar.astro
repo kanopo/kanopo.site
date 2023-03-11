@@ -1,32 +1,12 @@
 ---
-import ThemeIcon from "./ThemeIcon.astro";
+import ThemeSwitcher from "./ThemeSwitcher.astro";
 ---
 
-<div class="navbar">
-  <div class="nav-links">
+<div class="">
+  <div class="">
     <a href="/">Home</a>
     <a href="/wiki">Wiki</a>
     <a href="/tags">Tags</a>
   </div>
-  <ThemeIcon />
+  <ThemeSwitcher />
 </div>
-
-<style>
-  .navbar {
-    height: 5vh;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-  }
-
-  .nav-links {
-    height: 5vh;
-    width: 40vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-  }
-</style>

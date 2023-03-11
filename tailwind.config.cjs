@@ -1,22 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
+    colors: {
 
-@define-color white #a89984;
-@define-color black #282828;
-
-:root[data-theme="light"] {
-  --text-color: black;
-  --background-color: white;
-
-}
-
-:root[data-theme="dark"] {
-  --text-color: white;
-  --background-color: black;
-}
-
-/*
       'black': '#282828',
       'red': '#cc241d',
       'green': '#98971a',
@@ -37,10 +24,9 @@
       'blue_b': '#83a598',
       'aqua_b': '#8ec07c',
       'orange_b': '#fe8010',
-
-*/
-
-* {
-  color: var(--text-color);  
-  background-color: var(--background-color);
+    },
+    extend: {},
+  },
+  plugins: [],
 }
+

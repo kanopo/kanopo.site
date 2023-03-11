@@ -1,0 +1,20 @@
+<button id="theme-switcher-button"
+  >but<button></button>
+
+  <script>
+    const themeSwitcherButton = document.getElementById(
+      "theme-switcher-button"
+    );
+
+    themeSwitcherButton.onclick = () => {
+      const rootElement = document.getElementById("root");
+      let theme = rootElement.getAttribute("data-theme");
+
+      let newTheme = (theme === "light") ? "dark" : "light";
+
+      rootElement.setAttribute("data-theme", newTheme);
+
+      localStorage.setItem('theme', newTheme)
+    };
+  </script>
+</button>
