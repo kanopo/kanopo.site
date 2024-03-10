@@ -3,6 +3,8 @@ import "./globals.css";
 import { FC, ReactNode } from "react";
 import Navbar from "@/components/Navbar";
 import Navigation from "@/components/Navigation";
+import dynamic from 'next/dynamic'
+const NavigationSSR = dynamic(() => import('@/components/Navigation'), { ssr: false })
 
 export const metadata: Metadata = {
     title: "Kanopo",
@@ -17,7 +19,7 @@ const Layout: FC<Props> = ({ children }) => {
     return (
         <html lang="en">
             <body>
-                <Navigation />
+                <NavigationSSR />
                 {children}
             </body>
         </html>

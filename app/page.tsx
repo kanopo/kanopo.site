@@ -5,7 +5,7 @@ type Props = {
 
 const Page: FC<Props> = () => {
     return (
-        <div>
+        <div className="">
             KANOPO
         </div>
     )
