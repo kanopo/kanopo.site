@@ -17,7 +17,7 @@ const NavbarMobile: FC<Props> = ({ isOpen, toggle }) => {
         >
             <div>
                 <Link
-                    className='text-2xl font-bold underline rounded-xl p-2'
+                    className='text-2xl font-bold underline rounded-xl p-2 text-[#ac1d02]'
                     href='/'
                 >
                     Kanopo
@@ -33,7 +33,7 @@ const NavbarMobile: FC<Props> = ({ isOpen, toggle }) => {
                     />
                 </button>
                 {isOpen ?
-                    <div className='absolute top-20 left-0 w-full h-96 z-10 flex flex-col items-center justify-center gap-10 bg-opacity-0'>
+                    <div className='absolute top-20 left-0 w-full h-96 z-10 flex flex-col items-center justify-center gap-10 bg-[#6b7a3e]'>
                         <Link
                             onClick={toggle}
                             className='text-xl font-bold underline p-2 rounded-xl w-1/2 text-center'

@@ -13,7 +13,7 @@ const Navbar: FC<Props> = ({ setIsOpen }) => {
         >
             <div>
                 <Link
-                    className='text-2xl font-bold underline rounded-xl p-2'
+                    className='text-2xl font-bold underline rounded-xl p-2 text-[#ac1d02]'
                     href='/'
                 >
                     Kanopo
