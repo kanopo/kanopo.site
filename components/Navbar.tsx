@@ -2,9 +2,11 @@ import Link from 'next/link'
 import React, { FC } from 'react'
 
 type Props = {
+    setIsOpen: (isOpen: boolean) => void
 }
 
-const Navbar: FC<Props> = () => {
+const Navbar: FC<Props> = ({ setIsOpen }) => {
+    setIsOpen(false)
     return (
         <div
             className='w-11/12 mx-auto h-20 flex flex-row items-center justify-between'
