@@ -2,13 +2,12 @@ import { FC } from "react"
 
 type Props = {
 }
-
-const Page: FC<Props> = () => {
+const Loading: FC<Props> = () => {
     return (
         <div>
-            KANOPO
+            LOADING...
         </div>
     )
 }
 
-export default Page;
+export default Loading;

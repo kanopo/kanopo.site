@@ -2,13 +2,12 @@ import { FC } from "react"
 
 type Props = {
 }
-
-const Page: FC<Props> = () => {
+const NotFound: FC<Props> = () => {
     return (
         <div>
-            KANOPO
+            404 :(
         </div>
     )
 }
 
-export default Page;
+export default NotFound;

@@ -1,14 +1,15 @@
+"use client"
+
 import { FC } from "react"
 
 type Props = {
 }
-
-const Page: FC<Props> = () => {
+const Error: FC<Props> = () => {
     return (
         <div>
-            KANOPO
+            ERR
         </div>
     )
 }
 
-export default Page;
+export default Error;
