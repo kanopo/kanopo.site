@@ -18,7 +18,7 @@ type Props = {
 const Layout: FC<Props> = ({ children }) => {
     return (
         <html lang="en">
-            <body>
+            <body className="h-screen w-screen">
                 <NavigationSSR />
                 {children}
             </body>
