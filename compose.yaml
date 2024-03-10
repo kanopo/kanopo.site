@@ -1,33 +1,13 @@
-version: "3.9"
+version: "3"
 services:
-  postgres:
-    image: postgres:16.2-alpine3.19
-    container_name: postgres
+  kanopo-web:
+    container_name: kanopo-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+
     restart: always
-    shm_size: 256mb
-    volumes:
-      - ./pg-data:/var/lib/postgresql/data
-      - ./db/init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
-
     ports:
-      - 5432:5432
+      - 3000:3000
 
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_INITDB_ARGS: ${POSTGRES_INITDB_ARGS}
-
-  # pgadmin:
-  #   image: elestio/pgadmin
-  #   container_name: pgadmin
-  #   restart: always
-  #   environment:
-  #     PGADMIN_DEFAULT_EMAIL: "dmitri.ollari@protonmail.com"
-  #     PGADMIN_DEFAULT_PASSWORD: "password"
-  #     PGADMIN_LISTEN_PORT: 8080
-  #   ports:
-  #     - 8080:8080
-  #   volumes:
-  #     - ./pgadmin-data:/pgadmin4servers.json
-  # 
+    
