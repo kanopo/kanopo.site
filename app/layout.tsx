@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import "./globals.css";
 import { FC, ReactNode } from "react";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
     title: "Kanopo",
-    description: ":p"
+    description: ":qa!"
 }
 
 type Props = {
@@ -14,7 +15,10 @@ type Props = {
 const Layout: FC<Props> = ({ children }) => {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body>
+                <Navbar />
+                {children}
+            </body>
         </html>
     )
 }
